@@ -13,7 +13,7 @@
         
                 <div class="pro">
                 <!-- <form> -->
-                <img src="../../public/assets/img/products/f1.jpg" alt="">
+                <a href="<?=ROOT?>/productDetails"><img src="../../public/assets/img/products/f1.jpg" alt=""></a>
                     <div class="des">
                     <h2>shirt</h2>
                         <h5>yellow cool shirt</h5>

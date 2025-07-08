@@ -49,7 +49,7 @@
         <p>Summer Collection New Modren Desgin</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="../../public/assets/img/products/f1.jpg" alt="p1">
+                <a href="<?=ROOT?>/productDetails"><img src="../../public/assets/img/products/f1.jpg" alt="p1"></a>
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
