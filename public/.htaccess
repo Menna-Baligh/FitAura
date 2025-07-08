@@ -1,0 +1,8 @@
+ReWriteEngine On
+
+#accept loading of actual files and directories
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+
+#send everything else to the index page
+ReWriteRule ^(.*)$ index.php?url=$1 [L,QSA]
