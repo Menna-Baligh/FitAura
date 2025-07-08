@@ -1,14 +1,12 @@
-<?php
-include "header.php";
-include "navbar.php";
-?>
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
 
-<link rel="stylesheet" href="css/product-details.css">
+<link rel="stylesheet" href="../../public/assets/css/product-details.css">
 
 <section class="product-details">
 
     <div class="product-image">
-        <img src="admin/imgs/f1.png" alt="Product Image">
+        <img src="../../public/assets/img/products/f1.jpg" alt="Product Image">
     </div>
 
     <div class="product-info">
@@ -21,7 +19,7 @@ include "navbar.php";
             Classic Italian pizza made with tomato sauce, mozzarella, and fresh basil leaves. A favorite for all pizza lovers.
         </p>
 
-        <form action="add_to_cart.php" method="post">
+        <form action="" method="post">
             <input type="hidden" name="product_id" value="123">
             <input type="number" name="quantity" value="1" min="1" style="width: 60px; padding: 5px;">
             <button type="submit" class="btn-add">Add to Cart</button>
@@ -30,4 +28,4 @@ include "navbar.php";
 
 </section>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

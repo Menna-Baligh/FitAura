@@ -1,10 +1,10 @@
-<?php include "header.php"; ?>
-<?php include "navbar.php"; ?>
-<link rel="stylesheet" href="css/profile.css">
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
+<link rel="stylesheet" href="../../public/assets/css/profile.css">
 
 <div class="profile-container">
     <h2>Change Password</h2>
-    <form action="update_password.php" method="post" class="profile-form">
+    <form action="" method="post" class="profile-form">
         <label for="current">Current Password</label>
         <input type="password" id="current" name="current_password" required>
 
@@ -16,7 +16,7 @@
 
         <button type="submit" class="btn btn-password">Change Password</button>
     </form><br>
-    <a href="profile.php" class="btn btn-cancel">Cancel</a>
+    <a href="<?=ROOT?>/profile" class="btn btn-cancel">Cancel</a>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

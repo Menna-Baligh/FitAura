@@ -1,9 +1,7 @@
-<?php
-include "header.php";
-include "navbar.php";
-?>
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
 
-<link rel="stylesheet" href="css/orders.css">
+<link rel="stylesheet" href="../../public/assets/css/orders.css">
 
 <section class="orders-section">
     <h2>Your Orders</h2>
@@ -21,7 +19,7 @@ include "navbar.php";
         </thead>
         <tbody>
             <tr>
-                <td><img src="img/products/f1.jpg" alt="product"></td>
+                <td><img src="../../public/assets/img/products/f1.jpg" alt="product"></td>
                 <td>Pizza Margherita</td>
                 <td>2</td>
                 <td>$20.00</td>
@@ -29,7 +27,7 @@ include "navbar.php";
                 <td>2025-07-07</td>
             </tr>
             <tr>
-                <td><img src="img/products/f2.jpg" alt="product"></td>
+                <td><img src="../../public/assets/img/products/f2.jpg" alt="product"></td>
                 <td>Chicken Shawarma</td>
                 <td>1</td>
                 <td>$12.00</td>
@@ -37,7 +35,7 @@ include "navbar.php";
                 <td>2025-07-06</td>
             </tr>
             <tr>
-                <td><img src="img/products/f3.jpg" alt="product"></td>
+                <td><img src="../../public/assets/img/products/f3.jpg" alt="product"></td>
                 <td>Molokhia with Rice</td>
                 <td>3</td>
                 <td>$18.00</td>
@@ -49,4 +47,4 @@ include "navbar.php";
     </table>
 </section>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

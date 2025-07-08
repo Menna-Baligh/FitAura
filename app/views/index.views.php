@@ -1,5 +1,5 @@
-<?php include 'header.php' ?>
-<?php include 'navbar.php' ?>
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
 
 
 <section id="hero">
@@ -17,27 +17,27 @@
     <!-- start Feature-->
     <section id="feature" class="section-p1">
         <div class="fe-1">
-            <img src="img/features/f1.png" alt="">
+            <img src="../../public/assets/img/features/f1.png" alt="">
             <h6>Free Shipping</h6>
         </div>
         <div class="fe-1">
-            <img src="img/features/f2.png" alt="">
+            <img src="../../public/assets/img/features/f2.png" alt="">
             <h6>Online Order</h6>
         </div>
         <div class="fe-1">
-            <img src="img/features/f3.png" alt="">
+            <img src="../../public/assets/img/features/f3.png" alt="">
             <h6>Save Money</h6>
         </div>
         <div class="fe-1">
-            <img src="img/features/f4.png" alt="">
+            <img src="../../public/assets/img/features/f4.png" alt="">
             <h6>Promitions</h6>
         </div>
         <div class="fe-1">
-            <img src="img/features/f5.png" alt="">
+            <img src="../../public/assets/img/features/f5.png" alt="">
             <h6>Happy Sell</h6>
         </div>
         <div class="fe-1">
-            <img src="img/features/f6.png" alt="">
+            <img src="../../public/assets/img/features/f6.png" alt="">
             <h6>F7/24 Support</h6>
         </div>
     </section>
@@ -49,7 +49,7 @@
         <p>Summer Collection New Modren Desgin</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="img/products/f1.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f1.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/f2.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f2.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/f3.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f3.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -97,7 +97,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/f4.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f4.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/f5.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f5.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -129,7 +129,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/f6.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f6.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -145,7 +145,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/f7.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f7.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -161,7 +161,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/f8.jpg" alt="p1">
+                <img src="../../public/assets/img/products/f8.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -191,7 +191,7 @@
         <p>Summer Collection New Modren Desgin</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="img/products/n1.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n1.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -207,7 +207,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/n2.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n2.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -223,7 +223,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/n3.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n3.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -239,7 +239,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/n4.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n4.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -255,7 +255,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/n5.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n5.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -271,7 +271,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/n6.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n6.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -287,7 +287,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/n7.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n7.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -303,7 +303,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="img/products/n8.jpg" alt="p1">
+                <img src="../../public/assets/img/products/n8.jpg" alt="p1">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirt</h5>
@@ -366,4 +366,4 @@
 
 
 
-<?php include 'footer.php' ?>
+<?php include 'footer.views.php' ?>

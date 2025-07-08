@@ -8,7 +8,7 @@ if($_SERVER['SERVER_NAME'] === 'localhost'){
     define('DBDriver','mysql');
     define('DBPort',3307);
 
-    define('ROOT','http://localhost/MVCFramework/public');
+    define('ROOT','http://localhost:8080/public');
 }else{
     /** DB Config **/
     define('DBName','my_db');

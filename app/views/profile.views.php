@@ -1,15 +1,11 @@
-<?php
-include "header.php";
-include "navbar.php";
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
 
-
-?>
-
-<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="../../public/assets/css/profile.css">
 
 <div class="profile-container">
     <div class="profile-image">
-        <img src="img/people/default-avatar.jpg" alt="User Profile">
+        <img src="../../public/assets/img/people/default-avatar.jpg" alt="User Profile">
     </div>
 
     <div class="profile-info">
@@ -19,10 +15,10 @@ include "navbar.php";
         <p><strong>Address:</p>
 
         <div class="btns">
-            <a href="editProfile.php" class="btn btn-update">Update Profile</a>
-            <a href="changePassword.php" class="btn btn-password">Change Password</a>
+            <a href="" class="btn btn-update">Update Profile</a>
+            <a href="" class="btn btn-password">Change Password</a>
         </div>
     </div>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

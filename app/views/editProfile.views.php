@@ -1,13 +1,13 @@
-<?php include "header.php"; ?>
-<?php include "navbar.php"; ?>
-<link rel="stylesheet" href="css/profile.css">
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
+<link rel="stylesheet" href="../../public/assets/css/profile.css">
 
 <div class="profile-container">
     <h2>Edit Profile</h2>
-    <form action="update_profile.php" method="post" class="profile-form" enctype="multipart/form-data">
+    <form action="" method="post" class="profile-form" enctype="multipart/form-data">
         <!-- Show Current Profile Image -->
         <div style="text-align: center; margin-bottom: 20px;">
-            <img src="img/people/default-avatar.jpg" alt="Profile Image" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;">
+            <img src="../../public/assets/img/people/default-avatar.jpg" alt="Profile Image" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;">
         </div>
 
         <!-- Upload New Image -->
@@ -28,7 +28,7 @@
 
         <button type="submit" class="btn btn-save">Update</button>
     </form><br>
-    <a href="profile.php" class="btn btn-cancel">Cancel</a>
+    <a href="<?=ROOT?>/profile" class="btn btn-cancel">Cancel</a>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

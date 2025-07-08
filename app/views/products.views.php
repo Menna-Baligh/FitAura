@@ -1,6 +1,5 @@
-
-<?php include 'header.php' ?>
-<?php include 'navbar.php' ;?>
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
 
 
 
@@ -14,7 +13,7 @@
         
                 <div class="pro">
                 <!-- <form> -->
-                <img src="img/products/f1.jpg" alt="">
+                <img src="../../public/assets/img/products/f1.jpg" alt="">
                     <div class="des">
                     <h2>shirt</h2>
                         <h5>yellow cool shirt</h5>
@@ -33,7 +32,7 @@
                     </div>
                      <div class="pro">
                 <!-- <form> -->
-                <img src="img/products/f2.jpg" alt="">
+                <img src="../../public/assets/img/products/f2.jpg" alt="">
                     <div class="des">
                     <h2>shirt</h2>
                         <h5>yellow cool shirt</h5>
@@ -52,7 +51,7 @@
                     </div>
                      <div class="pro">
                 <!-- <form> -->
-                <img src="img/products/f3.jpg" alt="">
+                <img src="../../public/assets/img/products/f3.jpg" alt="">
                     <div class="des">
                     <h2>shirt</h2>
                         <h5>yellow cool shirt</h5>
@@ -72,7 +71,7 @@
                     
                         <div class="pro">
                     <!-- <form> -->
-                    <img src="img/products/f5.jpg" alt="">
+                    <img src="../../public/assets/img/products/f5.jpg" alt="">
                         <div class="des">
                         <h2>shirt</h2>
                             <h5>yellow cool shirt</h5>
@@ -136,4 +135,4 @@
     </section>
 
 
-    <?php include 'footer.php' ?>
+    <?php include 'footer.views.php' ?>

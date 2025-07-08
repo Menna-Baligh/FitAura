@@ -1,6 +1,6 @@
 <footer class="section-p1">
         <div class="col">
-            <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+            <a href="index.views.php"><img class="logo" src="img/logo.png" alt=""></a>
             <h4>Contact</h4>
             <p><strong>Address: </strong>526 manchster Road, street 32, manchster</p>
             <p><strong>Phone: </strong>0106244875</p>
@@ -36,11 +36,11 @@
             <h4>Install App</h4>
             <p>From App Store Or Google Play</p>
             <div class="oo">
-                <img src="img/pay/app.jpg " alt=" ">
-                <img src="img/pay/play.jpg " alt=" ">
+                <img src="../../public/assets/img/pay/app.jpg " alt=" ">
+                <img src="../../public/assets/img/pay/play.jpg " alt=" ">
             </div>
             <p>Secure payment For your happy Service</p>
-            <img src="img/pay/pay.png " alt=" ">
+            <img src="../../public/assets/img/pay/pay.png " alt=" ">
         </div>
 
         <div class="copyright">
@@ -49,9 +49,9 @@
     </footer>
 
 
-    <script src="js/all.min.js "></script>
-    <script src="js/bootstrap.bundle.min.js "></script>
-    <script src="js/main.js"></script>
+    <script src="../../public/assets/js/all.min.js"></script>
+    <script src="../../public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../public/assets/js/main.js"></script>
 </body>
 
 </html>

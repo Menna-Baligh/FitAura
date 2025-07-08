@@ -1,9 +1,7 @@
-<?php
-include "header.php";
-include "navbar.php";
-?>
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
 
-<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="../../public/assets/css/auth.css">
 
 <div class="auth-container">
     <div class="auth-card">
@@ -46,7 +44,7 @@ include "navbar.php";
                 <button class="btn-google"><i class="mdi mdi-google-plus"></i> Google Plus</button>
             </div>
 
-            <p class="sign-up">Already have an account? <a href="login.php">Login</a></p>
+            <p class="sign-up">Already have an account? <a href="<?=ROOT?>/login">Login</a></p>
             <p class="terms">By creating an account, you agree to our <a href="#">Terms & Conditions</a></p>
 
         </form>
@@ -54,4 +52,4 @@ include "navbar.php";
     </div>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

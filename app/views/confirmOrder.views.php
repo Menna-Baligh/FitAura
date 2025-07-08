@@ -1,11 +1,11 @@
-<?php include "header.php"; ?>
-<?php include "navbar.php"; ?>
-<link rel="stylesheet" href="css/confirm.css">
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
+<link rel="stylesheet" href="../../public/assets/css/confirm.css">
 
 <div class="checkout-container">
     
     <!-- Checkout Form -->
-    <form action="checkout_process.php" method="POST" class="checkout-form">
+    <form action="" method="POST" class="checkout-form">
         <h2>Checkout</h2>
 
         <div class="form-row">
@@ -84,4 +84,4 @@
 
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

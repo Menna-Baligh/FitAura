@@ -1,9 +1,9 @@
-<?php
-include "header.php";
-include "navbar.php";
-?>
 
-<link rel="stylesheet" href="css/login.css">
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
+
+
+<link rel="stylesheet" href="../../public/assets/css/login.css">
 
 <div class="login-container">
     <div class="login-card">
@@ -24,7 +24,7 @@ include "navbar.php";
                     <input type="checkbox" id="remember" class="form-check-input">
                     <label for="remember" class="form-check-label">Remember me</label>
                 </div>
-                <a href="forgetPassword.php" class="forgot-pass">Forgot password?</a>
+                <a href="" class="forgot-pass">Forgot password?</a>
             </div>
 
             <button type="submit" name="login" class="btn-login">Login</button>
@@ -34,9 +34,9 @@ include "navbar.php";
                 <button class="btn-social google">Google+</button>
             </div>
 
-            <p class="signup-text">Don't have an account? <a href="signup.php">Sign Up</a></p>
+            <p class="signup-text">Don't have an account? <a href="<?=ROOT?>/signup">Sign Up</a></p>
         </form>
     </div>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "footer.views.php"; ?>

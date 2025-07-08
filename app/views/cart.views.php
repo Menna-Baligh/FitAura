@@ -1,11 +1,11 @@
-<?php require_once 'header.php'; ?>
-<?php require_once 'navbar.php'; ?>
+<?php require_once 'header.views.php'; ?>
+<?php require_once 'navbar.views.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Cart Page</title>
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="../../public/assets/css/cart.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="admin/imgs/f1.png" alt="product1"></td>
+                    <td><img src="../../public/assets/img/products/f1.jpg" alt="product1"></td>
                     <td>Product Name</td>
                     <td>Product Description</td>
                     <td>
@@ -48,7 +48,7 @@
         </table>
 
         <div style="margin-top: 20px; text-align: center;">
-            <a href="confirmOrder.php" class="btn btn-success">Confirm Order</a>
+            <a href="<?=ROOT?>/ConfirmOrder" class="btn btn-success">Confirm Order</a>
         </div>
     </form>
 </section>
@@ -56,4 +56,4 @@
 </body>
 </html>
 
-<?php include "footer.php" ?>
+<?php include "footer.views.php" ?>

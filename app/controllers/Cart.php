@@ -1,8 +1,9 @@
 <?php
-class Home {
+class Cart {
     use Controller ;
     public function index(){
-        $this->view('index');
+        $this->view('cart');
+        // echo "menna" ;
     }
     
 }

@@ -1,8 +1,8 @@
 
 
 <section id="header">
-<a href="index.html">
-    <img src="img/logo.png" alt="homeLogo">
+<a href="<?=ROOT?>" id="homeLogo">
+    <img src="../../public/assets/img/logo.png" alt="homeLogo">
 </a>
 
 <div>
@@ -10,30 +10,30 @@
     
         
         <li class="link">
-            <a href="index.php">Home</a>
+            <a href="<?=ROOT?>/index">Home</a>
         </li>
         <li class="link">
-            <a href="products.php">Products</a>
+            <a href="<?=ROOT?>/products">Products</a>
         </li>
         <li class="link">
-            <a href="orders.php">Orders</a>
+            <a href="<?=ROOT?>/orders">Orders</a>
         </li>
         <li class="link">
-            <a href="signup.php">Signup</a>
+            <a href="<?=ROOT?>/signup">Signup</a>
         </li>
         <li class="link">
-            <a href="login.php">Login</a>
+            <a href="<?=ROOT?>/login">Login</a>
         </li>
         <li class="link">
-            <a href="logout.php">logout</a>
+            <a href="<?=ROOT?>/logout">logout</a>
         </li>
         <li class="link">
-            <a id="lg-cart" href="cart.php">
+            <a id="lg-cart" href="<?=ROOT?>/cart">
                 <i class="fas fa-shopping-cart"></i> 
             </a>
         </li>
         <li class="link">
-            <a href="profile.php">
+            <a href="<?=ROOT?>/profile">
                 <i class="fas fa-user"></i> 
             </a>
         </li>
@@ -42,7 +42,7 @@
 </div>
 
 <div id="mobile">
-    <a href="cart.html">
+    <a href="<?=ROOT?>/cart" id="cart">
         <i class="fas fa-shopping-cart"></i>
     </a>
     <a href="#" id="bar"> <i class="fas fa-outdent"></i> </a>
