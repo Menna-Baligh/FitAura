@@ -1,6 +1,6 @@
 <?php
 class App{
-    private $controller = 'Home' ;
+    private $controller = 'Index' ;
     private $method = 'index' ;
     private function splitUrl(){
         
@@ -24,7 +24,7 @@ class App{
 
             // If URL is empty, fallback to 'home'
             if (empty($URL[0])) {
-                $URL[0] = 'home';
+                $URL[0] = 'index';
             }
 
             return $URL;
