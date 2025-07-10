@@ -1,17 +1,17 @@
 <?php
 if($_SERVER['SERVER_NAME'] === 'localhost'){
     /** DB Config **/
-    define('DBName','my_db');
+    define('DBName','fitaura');
     define('DBHost','localhost');
     define('DBUser','root');
     define('DBPass','');
     define('DBDriver','mysql');
-    define('DBPort',3307);
+    define('DBPort',3307); //note: change this is to 3306 if you are using the defualt port
 
     define('ROOT','http://localhost:8080/public');
 }else{
     /** DB Config **/
-    define('DBName','my_db');
+    define('DBName','fitaura');
     define('DBHost','localhost');
     define('DBUser','root');
     define('DBPass','');
