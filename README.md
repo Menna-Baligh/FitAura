@@ -47,8 +47,7 @@
   3. Select `schema.sql` file
   4. Click **Go**
 
-- The project uses MySQL port `3307` u can change it to any port in **core/config.php** 
-- Images are stored in `public/img/products/`
+- The project uses MySQL port `3307` u can change it to any port in `core/config.php` 
 
 ---
 
