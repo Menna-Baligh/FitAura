@@ -6,10 +6,9 @@
 
 ## 📁 Project Structure
 
-- `app/` – Contains controllers, models, and core classes  
-- `views/` – Contains the frontend views   
+- `app/` – Contains controllers, models,views, and core classes  
 - `public/` – Contains the entry point `index.php`, assets like CSS, JS, and images  
-- `schema.sql` – Contains the database structure and seed data for products table
+- `DB/` – Contains the database structure and seed data for products table
 
 ---
 
