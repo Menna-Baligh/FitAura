@@ -20,7 +20,7 @@
 
     <!-- End Links -->
 
-    <title>Store</title>
+    <title>FitAura</title>
 
 </head>
 

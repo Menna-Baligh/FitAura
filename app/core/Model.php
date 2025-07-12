@@ -41,7 +41,7 @@ trait Model {
             $query.= $key." != :".$key." && " ;
         }
         $query = trim($query , " && ");
-        $query .= " limit $this->limit offset $this->offset";
+        $query .= " limit 1";
         $data = array_merge($data , $dataNot);
         $result = $this->Query($query , $data);
         if($result) return $result[0];

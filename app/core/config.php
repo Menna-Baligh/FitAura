@@ -1,7 +1,7 @@
 <?php
 if($_SERVER['SERVER_NAME'] === 'localhost'){
     /** DB Config **/
-    define('DBName','fitaura');
+    define('DBName','fitaura'); //note: name of the database you created
     define('DBHost','localhost');
     define('DBUser','root');
     define('DBPass','');
