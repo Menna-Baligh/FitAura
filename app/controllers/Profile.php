@@ -75,6 +75,22 @@ class Profile {
         $user->update($id, $data);
         Redirect('profile');
     }
+    public function deleteImage($id){
+        $user = new User();
+        $old = $user->first(['id' => $id]);
+        if(empty($old)){
+            Redirect('_404');
+        }
+        if(!empty($old->image)) {
+            $imagePath = '../public/assets/img/people/' . $old->image;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+            $data = ['image' => null];
+            $user->update($id, $data);
+        }
+        Redirect('profile');
+    }
 
     
 }

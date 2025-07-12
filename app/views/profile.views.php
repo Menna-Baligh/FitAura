@@ -12,7 +12,7 @@
         <?php if(isset($user->image) && !empty($user->image)): ?>
             <img src="<?=ROOT?>/assets/img/people/<?= $user->image ?>" alt="User Profile">
         <?php else: ?>
-        <img src="<?=ROOT?>/assets/img/people/default-avatar.jpg" alt="User Profile">
+        <img src="<?=ROOT?>/assets/img/people/default-avatar.jpg" alt="default avatar">
         <?php endif; ?>
     </div>
 
@@ -25,6 +25,13 @@
         <div class="btns">
             <a href="<?=ROOT?>/Profile/editProfile/<?= $user->id?>" class="btn btn-update">Update Profile</a>
             <a href="<?=ROOT?>/Profile/ChangePassword/<?= $user->id?>" class="btn btn-password">Change Password</a>
+            <?php if(isset($user->image) && !empty($user->image)): ?>
+                <a href="<?=ROOT?>/Profile/deleteImage/<?= $user->id?>" 
+                    class="btn btn-delete" 
+                    onclick="return confirm('Are you sure you want to delete your profile image?');">
+                    🗑️ Delete Image
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 </div>

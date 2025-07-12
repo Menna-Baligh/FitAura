@@ -120,3 +120,19 @@ body {
     line-height: 1.5;
     text-align: center;
 }
+.btn-delete {
+    background-color: #632424;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid #632424;
+    transition: 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #b33030;
+    color: white;
+}
+
