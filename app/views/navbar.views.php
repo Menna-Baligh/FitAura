@@ -2,7 +2,7 @@
 
 <section id="header">
 <a href="<?=ROOT?>" id="homeLogo">
-    <img src="../../public/assets/img/logo.png" alt="homeLogo">
+    <img src="<?=ROOT?>/assets/img/logo.png" alt="homeLogo">
 </a>
 
 <div>

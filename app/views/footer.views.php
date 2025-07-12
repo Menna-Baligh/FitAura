@@ -36,11 +36,11 @@
             <h4>Install App</h4>
             <p>From App Store Or Google Play</p>
             <div class="oo">
-                <img src="../../public/assets/img/pay/app.jpg " alt=" ">
-                <img src="../../public/assets/img/pay/play.jpg " alt=" ">
+                <img src="<?=ROOT?>/assets/img/pay/app.jpg " alt=" ">
+                <img src="<?=ROOT?>/assets/img/pay/play.jpg " alt=" ">
             </div>
             <p>Secure payment For your happy Service</p>
-            <img src="../../public/assets/img/pay/pay.png " alt=" ">
+            <img src="<?=ROOT?>/assets/img/pay/pay.png " alt=" ">
         </div>
 
         <div class="copyright">

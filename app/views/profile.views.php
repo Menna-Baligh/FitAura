@@ -5,14 +5,14 @@
         Redirect('login');
     }
 ?>
-<link rel="stylesheet" href="../../public/assets/css/profile.css">
+<link rel="stylesheet" href="<?=ROOT?>/assets/css/profile.css">
 
 <div class="profile-container">
     <div class="profile-image">
         <?php if(isset($user->image) && !empty($user->image)): ?>
-            <img src="../../public/assets/img/people/<?= $user->image ?>" alt="User Profile">
+            <img src="<?=ROOT?>/assets/img/people/<?= $user->image ?>" alt="User Profile">
         <?php else: ?>
-        <img src="../../public/assets/img/people/default-avatar.jpg" alt="User Profile">
+        <img src="<?=ROOT?>/assets/img/people/default-avatar.jpg" alt="User Profile">
         <?php endif; ?>
     </div>
 
@@ -23,7 +23,7 @@
         <p><strong>Address: </strong><?= $user->address ?></p>
 
         <div class="btns">
-            <a href="" class="btn btn-update">Update Profile</a>
+            <a href="<?=ROOT?>/Profile/editProfile/<?= $user->id?>" class="btn btn-update">Update Profile</a>
             <a href="" class="btn btn-password">Change Password</a>
         </div>
     </div>

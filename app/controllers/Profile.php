@@ -12,5 +12,40 @@ class Profile {
         $user = $user->first(['id' => $_SESSION['user_id']]);
         $this->view('profile', ['user' => $user]);
     }
+    public function editProfile($id){
+        $user = new User();
+        $user = $user->first(['id' => $id]);
+        if(empty($user)){
+            Redirect('_404');
+        }
+        $this->view('editProfile', ['user' => $user]);
+    }
+    public function update($id){
+        $user = new User();
+        $old = $user->first(['id' => $id]);
+        if(empty($old)){
+            Redirect('_404');
+        }
+        if(isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] == 0) {
+            if(!empty($old->image)) {
+                $oldImagePath = '../public/assets/img/people/' . $old->image;
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+            $newName = time() . '_' . $_FILES['profile_image']['name'];
+            $destination = '../public/assets/img/people/' . $newName;
+            move_uploaded_file($_FILES['profile_image']['tmp_name'], $destination);
+        }
+        $data = [
+            'username' => $_POST['username'],
+            'email' => $_POST['email'],
+            'phone' => $_POST['phone'],
+            'address' => $_POST['address'],
+            'image' => isset($newName) ? $newName : $old->image
+        ];
+        $user->update($id, $data);
+        Redirect('profile');
+    }
     
 }

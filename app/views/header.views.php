@@ -3,13 +3,13 @@
 <head>
 
     <!-- Start Links -->
-    <link rel="stylesheet" href="../../public/assets/css/splide.min.css">
-    <link rel="stylesheet" href="../../public/assets/css/splide-core.min.css">
-    <link rel="stylesheet" href="../../public/assets/css/all.min.css">
-    <link rel="stylesheet" href="../../public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/css/splide.min.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/css/splide-core.min.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/css/all.min.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/css/bootstrap.min.css">
 
     <!--Start Home Style -->
-    <link rel="stylesheet" href="../../public/assets/css/index_style.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/css/index_style.css">
     <!-- End Home Style -->
 
     <!-- Start Google Fonts -->
