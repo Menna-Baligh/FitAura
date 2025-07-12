@@ -120,19 +120,32 @@ body {
     line-height: 1.5;
     text-align: center;
 }
-.btn-delete {
-    background-color: #632424;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 18px;
-    border: 1px solid #632424;
-    transition: 0.3s ease;
+
+.delete-image-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
 }
 
-.btn-delete:hover {
-    background-color: #b33030;
-    color: white;
+.delete-image-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545; /* Bootstrap red */
+    border: 1px solid #dc3545;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
+.delete-image-form button:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
+
+
 

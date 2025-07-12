@@ -26,11 +26,9 @@
             <a href="<?=ROOT?>/Profile/editProfile/<?= $user->id?>" class="btn btn-update">Update Profile</a>
             <a href="<?=ROOT?>/Profile/ChangePassword/<?= $user->id?>" class="btn btn-password">Change Password</a>
             <?php if(isset($user->image) && !empty($user->image)): ?>
-                <a href="<?=ROOT?>/Profile/deleteImage/<?= $user->id?>" 
-                    class="btn btn-delete" 
-                    onclick="return confirm('Are you sure you want to delete your profile image?');">
-                    🗑️ Delete Image
-                </a>
+                    <form action="<?=ROOT?>/Profile/deleteImage/<?= $user->id?>" method="post" class="delete-image-form">
+                        <button type="submit">Delete Image</button>
+                    </form>
             <?php endif; ?>
         </div>
     </div>

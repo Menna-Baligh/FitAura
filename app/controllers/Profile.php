@@ -12,10 +12,13 @@ class Profile {
         $user = $user->first(['id' => $_SESSION['user_id']]);
         $this->view('profile', ['user' => $user]);
     }
-    public function editProfile($id){
+    public function editProfile($id = null){
+        if(empty($id)) {
+            Redirect('profile');
+        }
         $user = new User();
         $user = $user->first(['id' => $id]);
-        if(empty($user)){
+        if(empty($user) || $id != $_SESSION['user_id']) {
             Redirect('_404');
         }
         $this->view('editProfile', ['user' => $user]);
@@ -23,7 +26,7 @@ class Profile {
     public function update($id){
         $user = new User();
         $old = $user->first(['id' => $id]);
-        if(empty($old)){
+        if(empty($old) || $id != $_SESSION['user_id']) {
             Redirect('_404');
         }
         if(isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] == 0) {
@@ -47,10 +50,13 @@ class Profile {
         $user->update($id, $data);
         Redirect('profile');
     }
-    public function ChangePassword($id){
+    public function ChangePassword($id = null){
+        if(empty($id)) {
+            Redirect('profile');
+        }
         $user = new User();
         $user = $user->first(['id' => $id]);
-        if(empty($user)){
+        if(empty($user) || $id != $_SESSION['user_id']) {
             Redirect('_404');
         }
         $this->view('changePassword', ['user' => $user]);
@@ -58,7 +64,7 @@ class Profile {
     public function changed($id){
         $user = new User();
         $old = $user->first(['id' => $id]);
-        if(empty($old)){
+        if(empty($old) || $id!= $_SESSION['user_id']) {
             Redirect('_404');
         }
         if(!password_verify($_POST['current_password'], $old->password)) {
