@@ -24,7 +24,7 @@
 
         <div class="btns">
             <a href="<?=ROOT?>/Profile/editProfile/<?= $user->id?>" class="btn btn-update">Update Profile</a>
-            <a href="" class="btn btn-password">Change Password</a>
+            <a href="<?=ROOT?>/Profile/ChangePassword/<?= $user->id?>" class="btn btn-password">Change Password</a>
         </div>
     </div>
 </div>

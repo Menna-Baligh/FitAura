@@ -1,13 +1,16 @@
 <?php require_once 'header.views.php'; ?>
 <?php require_once 'navbar.views.php'; ?>
-<link rel="stylesheet" href="../../public/assets/css/profile.css">
+<link rel="stylesheet" href="<?=ROOT?>/assets/css/profile.css">
 
 <div class="profile-container">
     <h2>Change Password</h2>
-    <form action="" method="post" class="profile-form">
+    <?php if(isset($_SESSION['error'])): ?>
+            <div class="error-message"><?= $_SESSION['error'] ?></div>
+            <?php unset($_SESSION['error']); endif; ?>
+    <form action="<?=ROOT?>/Profile/changed/<?= $user->id?>" method="post" class="profile-form">
         <label for="current">Current Password</label>
         <input type="password" id="current" name="current_password" required>
-
+        
         <label for="new">New Password</label>
         <input type="password" id="new" name="new_password" required>
 

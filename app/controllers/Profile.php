@@ -47,5 +47,34 @@ class Profile {
         $user->update($id, $data);
         Redirect('profile');
     }
+    public function ChangePassword($id){
+        $user = new User();
+        $user = $user->first(['id' => $id]);
+        if(empty($user)){
+            Redirect('_404');
+        }
+        $this->view('changePassword', ['user' => $user]);
+    }
+    public function changed($id){
+        $user = new User();
+        $old = $user->first(['id' => $id]);
+        if(empty($old)){
+            Redirect('_404');
+        }
+        if(!password_verify($_POST['current_password'], $old->password)) {
+            $_SESSION['error'] = 'Current password is incorrect.';
+            Redirect('Profile/ChangePassword/' . $id);
+        }
+        if($_POST['new_password'] !== $_POST['confirm_password']) {
+            $_SESSION['error'] = 'New password and confirmation do not match.';
+            Redirect('Profile/ChangePassword/' . $id);
+        }
+        $data = [
+            'password' => password_hash($_POST['new_password'], PASSWORD_DEFAULT)
+        ];
+        $user->update($id, $data);
+        Redirect('profile');
+    }
+
     
 }
