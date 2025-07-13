@@ -35,13 +35,29 @@ CREATE TABLE cart (
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
+CREATE TABLE shipping_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    address TEXT,
+    city VARCHAR(50),
+    postal_code VARCHAR(50),
+    phone VARCHAR(50),
+    user_id INT,
+    payment_type ENUM('credit_card', 'cash on delivery', 'fawry') DEFAULT 'cash on delivery',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
 CREATE TABLE orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     total DECIMAL(10, 2),
+    shopping_info_id INT,
     status ENUM('pending', 'processing', 'shipped', 'delivered' ,'cancelled') DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ,
+    FOREIGN KEY (`shopping_info_id`) REFERENCES shipping_info(`id`) ON DELETE CASCADE
 );
 
 CREATE TABLE order_details (
@@ -53,22 +69,6 @@ CREATE TABLE order_details (
     FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
-
-CREATE TABLE shipping_info (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    order_id INT,
-    name VARCHAR(100),
-    email VARCHAR(100),
-    address TEXT,
-    city VARCHAR(50),
-    postal_code VARCHAR(50),
-    phone VARCHAR(50),
-    payment_type ENUM('credit_card', 'cash on delivery', 'fawry') DEFAULT 'cash on delivery',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
-);
-
-
 
 
 INSERT INTO products (name, description, price, image, type , stock_qty) VALUES

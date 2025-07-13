@@ -119,3 +119,19 @@ select {
         flex-direction: column;
     }
 }
+.error-message {
+    color: #b30000;
+    background-color: #ffe6e6;
+    border: 1px solid #ff4d4d;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 0 auto; /* Center horizontally */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 600px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 15px;
+}
+

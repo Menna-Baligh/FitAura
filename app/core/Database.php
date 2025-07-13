@@ -1,5 +1,6 @@
 <?php
 trait Database{
+    private $transactionConnection = null;
     private function connect(){
         $dsn = DBDriver.":host=".DBHost.";port=".DBPort.";dbname=".DBName;
         $conn = new PDO($dsn , DBUser , DBPass);
@@ -17,4 +18,25 @@ trait Database{
         }
         return false ; 
     }
+    // ✅ Start a transaction
+    public function beginTransaction() {
+        $this->transactionConnection = $this->connect();
+        $this->transactionConnection->beginTransaction();
+    }
+
+    // ✅ Commit the transaction
+    public function commit() {
+        if ($this->transactionConnection) {
+            $this->transactionConnection->commit();
+            $this->transactionConnection = null;
+        }
+    }
+
+        // ✅ Roll back the transaction
+        public function rollBack() {
+            if ($this->transactionConnection) {
+                $this->transactionConnection->rollBack();
+                $this->transactionConnection = null;
+            }
+        }
 }

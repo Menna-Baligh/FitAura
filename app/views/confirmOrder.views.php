@@ -1,11 +1,16 @@
 <?php require_once 'header.views.php'; ?>
 <?php require_once 'navbar.views.php'; ?>
 <link rel="stylesheet" href="../../public/assets/css/confirm.css">
-
+<?php
+    if(isset($_SESSION['error'])) {
+        echo '<div class="error-message">' . $_SESSION['error'] . '</div>';
+        unset($_SESSION['error']);
+    }
+?>
 <div class="checkout-container">
     
     <!-- Checkout Form -->
-    <form action="" method="POST" class="checkout-form">
+    <form action="<?=ROOT?>/ConfirmOrder/checkout" method="POST" class="checkout-form">
         <h2>Checkout</h2>
 
         <div class="form-row">
@@ -61,11 +66,11 @@
         <table>
             <tr>
                 <td>Items</td>
-                <td>3</td>
+                <td><?= $items?></td>
             </tr>
             <tr>
                 <td>Subtotal</td>
-                <td>$60.00</td>
+                <td>$<?=$subtotal?></td>
             </tr>
             <tr>
                 <td>Discount</td>
@@ -75,9 +80,10 @@
                 <td>Shipping</td>
                 <td>$0.00</td>
             </tr>
+            <?php $total = $subtotal - 5; ?>
             <tr class="total-row">
                 <td><strong>Total</strong></td>
-                <td><strong>$55.00</strong></td>
+                <td><strong>$<?=$total?></strong></td>
             </tr>
         </table>
     </div>

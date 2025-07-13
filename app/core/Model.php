@@ -26,8 +26,7 @@ trait Model {
         $query .= " ORDER BY $this->order_col $this->order_type limit $this->limit offset $this->offset";
         $data = array_merge($data , $dataNot);
         $result = $this->Query($query , $data);
-        if($result) return $result ;
-        return false ; 
+        return is_array($result) ? $result : [];
     }
     public function first($data , $dataNot = []){
         $keys = array_keys($data);
@@ -89,4 +88,23 @@ trait Model {
         $this->Query($query , $data);
         return false ;
     }
+    public function insertAndGetId($data){
+        if(!empty($this->allowedColumns)){
+            foreach(array_keys($data) as $key){
+                if(!in_array($key , $this->allowedColumns)){
+                    unset($data[$key]);
+                }
+            }
+        }
+
+        $keys = array_keys($data);
+        $query = "INSERT INTO $this->table(".implode(',', $keys).") VALUES (:".implode(',:', $keys).")";
+
+        $conn = $this->connect();
+        $stm = $conn->prepare($query);
+        $stm->execute($data);
+
+        return $conn->lastInsertId(); 
+}
+
 }

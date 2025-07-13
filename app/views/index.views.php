@@ -61,6 +61,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <h4>78</h4>
+                    <!-- note to me after martina finish this page i refactor this to be dynamic + disabled (case of stock) -->
                     <a href="<?=ROOT?>/cart/add/1" class="cart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
