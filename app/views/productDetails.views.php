@@ -19,9 +19,7 @@
             Classic Italian pizza made with tomato sauce, mozzarella, and fresh basil leaves. A favorite for all pizza lovers.
         </p>
 
-        <form action="" method="post">
-            <input type="hidden" name="product_id" value="123">
-            <input type="number" name="quantity" value="1" min="1" style="width: 60px; padding: 5px;">
+        <form action="<?=ROOT?>/cart/add/1" method="post">
             <button type="submit" class="btn-add">Add to Cart</button>
         </form>
     </div>

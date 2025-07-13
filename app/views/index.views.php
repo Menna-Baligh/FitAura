@@ -61,7 +61,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <h4>78</h4>
-                    <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="<?=ROOT?>/cart/add/1" class="cart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
             <div class="pro">
@@ -77,7 +77,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <h4>78</h4>
-                    <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="<?=ROOT?>/cart/add/2" class="cart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
             <div class="pro">
