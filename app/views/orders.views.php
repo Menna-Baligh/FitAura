@@ -3,48 +3,49 @@
 
 <link rel="stylesheet" href="../../public/assets/css/orders.css">
 
-<section class="orders-section">
-    <h2>Your Orders</h2>
+<?php if (!isset($_SESSION['user_id'])) Redirect('login'); ?>
 
-    <table class="orders-table">
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Product</th>
-                <th>Qty</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="../../public/assets/img/products/f1.jpg" alt="product"></td>
-                <td>Pizza Margherita</td>
-                <td>2</td>
-                <td>$20.00</td>
-                <td><span class="status pending">Pending</span></td>
-                <td>2025-07-07</td>
-            </tr>
-            <tr>
-                <td><img src="../../public/assets/img/products/f2.jpg" alt="product"></td>
-                <td>Chicken Shawarma</td>
-                <td>1</td>
-                <td>$12.00</td>
-                <td><span class="status delivered">Delivered</span></td>
-                <td>2025-07-06</td>
-            </tr>
-            <tr>
-                <td><img src="../../public/assets/img/products/f3.jpg" alt="product"></td>
-                <td>Molokhia with Rice</td>
-                <td>3</td>
-                <td>$18.00</td>
-                <td><span class="status cancelled">Cancelled</span></td>
-                <td>2025-07-05</td>
-            </tr>
-            <!-- loop from db-->
-        </tbody>
-    </table>
-</section>
+<?php if (empty($orders)): ?>
+    <div class="empty-cart">
+        <h2>Your orders is empty!</h2>
+        <p>Looks like you haven’t ordered anything yet...</p>
+        <a href="<?= ROOT ?>" class="start-btn">Start Shopping</a>
+    </div>
+<?php else: ?>
+    <section class="orders-section">
+        <h2>Your Orders</h2>
+
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($orders as $order): ?>
+                    <?php foreach($order->details as $item): ?>
+                        <tr>
+                            <td>
+                                <img src="<?= ROOT ?>/assets/<?= $item->product_image ?>" alt="product">
+                            </td>
+                            <td><?= $item->product_name ?></td>
+                            <td><?= $item->quantity ?></td>
+                            <td>$<?= $item->price ?></td>
+                            <td>$<?=$item->price * $item->quantity?></td>
+                            <td><span class="status <?= strtolower($order->status) ?>"><?= $order->status ?></span></td>
+                            <td><?= date('d M Y, h:i A', strtotime($order->created_at)) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </section>
+<?php endif; ?>
 
 <?php include "footer.views.php"; ?>
