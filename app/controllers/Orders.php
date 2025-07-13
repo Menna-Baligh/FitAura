@@ -15,7 +15,7 @@ class Orders {
                 $product = $productModel->first(['id' => $detail->product_id]);
                 $detail->product_name = $product->name ;
                 $detail->product_image = $product->image ;
-                $detail->price = $detail->price ;
+                $detail->price = $product->price ;
             }
             $order->details = $details;
         }
