@@ -44,7 +44,7 @@ trait Model {
         $data = array_merge($data , $dataNot);
         $result = $this->Query($query , $data);
         if($result) return $result[0];
-        return false ; 
+        return true ; 
     }
     public function insert($data){
 

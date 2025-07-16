@@ -1,6 +1,18 @@
 <?php require_once 'header.views.php'; ?>
 <?php require_once 'navbar.views.php'; ?>
-
+<?php
+    if(isset($_SESSION['user_name'])) {
+        ?><script>
+            Swal.fire({
+                icon: "success",
+                title: "Welcome, <?=$_SESSION['user_name']?> 😍",
+                text: "You are now logged in.",
+                confirmButtonText: "OK"
+            });
+        </script>';
+        <?php unset($_SESSION['user_name']);
+    }
+?>
 
 <section id="hero">
 

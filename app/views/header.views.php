@@ -3,6 +3,8 @@
 <head>
 
     <!-- Start Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/splide.min.css">
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/splide-core.min.css">
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/all.min.css">

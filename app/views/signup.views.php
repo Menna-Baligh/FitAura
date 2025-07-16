@@ -7,32 +7,42 @@
     <div class="auth-card">
 
         <h3 class="auth-title">Register</h3>
-
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+        <?php
+            if(isset($_SESSION['error'])):
+                echo '<div class="error-message">' . $_SESSION['error'] . '</div>';
+                unset($_SESSION['error']);
+            endif;
+        ?>
+        <form action="<?=ROOT?>/signup/store" method="post">
 
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" class="form-control" name="UserName">
+                <input type="text" class="form-control" name="userName" value="<?php if(isset($_SESSION['old']['userName'])): echo $_SESSION['old']['userName']; endif; unset($_SESSION['old']['userName']);?>">
+                <?php if(isset($_SESSION['errors']['userName'])): ?><p class="error-message"><?= $_SESSION['errors']['userName'] ?></p><?php endif; unset($_SESSION['errors']['userName']); ?>
             </div>
 
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" class="form-control" name="email">
+                <input type="email" class="form-control" name="email" value="<?php if(isset($_SESSION['old']['email'])): echo $_SESSION['old']['email']; endif; unset($_SESSION['old']['email']);?>">
+                <?php if(isset($_SESSION['errors']['email'])): ?><p class="error-message"><?= $_SESSION['errors']['email'] ?></p><?php endif; unset($_SESSION['errors']['email']); ?>
             </div>
 
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" class="form-control" name="password">
+                <?php if(isset($_SESSION['errors']['password'])): ?><p class="error-message"><?= $_SESSION['errors']['password'] ?></p><?php endif; unset($_SESSION['errors']['password']); ?>
             </div>
 
             <div class="form-group">
                 <label>Phone</label>
-                <input type="text" class="form-control" name="phone">
+                <input type="text" class="form-control" name="phone" value="<?php if(isset($_SESSION['old']['phone'])): echo $_SESSION['old']['phone']; endif; unset($_SESSION['old']['phone']);?>">
+                <?php if(isset($_SESSION['errors']['phone'])): ?><p class="error-message"><?= $_SESSION['errors']['phone'] ?></p><?php endif; unset($_SESSION['errors']['phone']); ?>
             </div>
 
             <div class="form-group">
                 <label>Address</label>
-                <input type="text" class="form-control" name="address">
+                <input type="text" class="form-control" name="address" value="<?php if(isset($_SESSION['old']['address'])): echo $_SESSION['old']['address']; endif; unset($_SESSION['old']['address']);?>">
+                <?php if(isset($_SESSION['errors']['address'])): ?><p class="error-message"><?= $_SESSION['errors']['address'] ?></p><?php endif; unset($_SESSION['errors']['address']); ?>
             </div>
 
             <div class="text-center">

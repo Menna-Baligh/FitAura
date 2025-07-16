@@ -102,3 +102,11 @@ body {
     color: #007bff;
     text-decoration: none;
 }
+.error-message {
+    color: #a94442; 
+    padding: 5px 5px; 
+    font-size: 14px; 
+    margin-top: 8px; 
+    width: fit-content; 
+    max-width: 100%; 
+}
