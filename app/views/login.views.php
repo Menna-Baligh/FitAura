@@ -8,7 +8,13 @@
 <div class="login-container">
     <div class="login-card">
         <h3 class="login-title">Login</h3>
-        <form action="" method="post">
+        <?php
+        if(isset($_SESSION['error'])) {
+            echo '<div class="error-message">' . $_SESSION['error'] . '</div>';
+            unset($_SESSION['error']);
+        }
+        ?>
+        <form action="<?=ROOT?>/login/store" method="post">
             <div class="form-group">
                 <label for="email">Email *</label>
                 <input type="email" name="email" id="email" class="form-control" required>
@@ -19,14 +25,7 @@
                 <input type="password" name="password" id="password" class="form-control" required>
             </div>
 
-            <div class="form-options">
-                <div class="form-check">
-                    <input type="checkbox" id="remember" class="form-check-input">
-                    <label for="remember" class="form-check-label">Remember me</label>
-                </div>
-                <a href="" class="forgot-pass">Forgot password?</a>
-            </div>
-
+            
             <button type="submit" name="login" class="btn-login">Login</button>
 
             <div class="social-login">

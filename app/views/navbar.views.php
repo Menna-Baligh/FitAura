@@ -18,15 +18,21 @@
         <li class="link">
             <a href="<?=ROOT?>/orders">Orders</a>
         </li>
-        <li class="link">
+        <?php
+        if(!isset($_SESSION['user_id'])){?>
+            <li class="link">
             <a href="<?=ROOT?>/signup">Signup</a>
-        </li>
-        <li class="link">
-            <a href="<?=ROOT?>/login">Login</a>
-        </li>
-        <li class="link">
+            </li>
+            <li class="link">
+                <a href="<?=ROOT?>/login">Login</a>
+            </li>
+        <?php }
+        else{?>
+            <li class="link">
             <a href="<?=ROOT?>/logout">logout</a>
-        </li>
+            </li>
+        <?php }
+        ?>
         <li class="link">
             <a id="lg-cart" href="<?=ROOT?>/cart">
                 <i class="fas fa-shopping-cart"></i> 
