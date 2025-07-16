@@ -87,7 +87,9 @@ INSERT INTO products (name, description, price, image, type , stock_qty) VALUES
 ('shorts','Cotton shorts with regular fit', 250.00, 'img/products/n6.jpg', 'Shorts', 20),
 ('casual shirt','Cotton shirt with regular fit', 250.00, 'img/products/n7.jpg', 'Shirt', 20),
 ('black T-shirt','Cotton T-shirt with regular fit', 250.00, 'img/products/n8.jpg', 'T-shirt', 20),
-('Classic Men Shirt', 'Cotton shirt with regular fit', 250.00, 'img/products/f1.jpg', 'Shirt', 10);
+('Classic Men Shirt', 'Cotton shirt with regular fit', 250.00, 'img/products/f1.jpg', 'Shirt', 10),
+('blue men cool T-shirt', 'Cotton T-shirt with regular fit', 250.00, 'img/products/n1.jpg', 'T-shirt',20),
+('gray shirt','Cotton shirt with regular fit', 250.00, 'img/products/n2.jpg', 'Shirt', 20);
 
 
 

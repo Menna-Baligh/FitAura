@@ -3,7 +3,7 @@ trait Model {
     use Database ;
     public $limit      = 10 ;
     public $offset     = 0 ;
-    protected $order_type = 'desc' ;
+    protected $order_type = 'asc' ;
     protected $order_col  = 'id' ;
     public $errors        = [];
 

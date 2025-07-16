@@ -7,121 +7,40 @@
         <h2>Featured Products</h2>
         <p>Summer Collection New Modren Desgin</p>
         <div class="pro-container">
-
         
-
-        
-                <div class="pro">
-                <!-- <form> -->
-                <a href="<?=ROOT?>/productDetails"><img src="../../public/assets/img/products/f1.jpg" alt=""></a>
-                    <div class="des">
-                    <h2>shirt</h2>
-                        <h5>yellow cool shirt</h5>
-                        <div class="star ">
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                        </div>
-                        <h4>7$</h4>
-                        <input type="number" name="quantity">
-                        <button type="submit"><a class="cart "><i class="fas fa-shopping-cart "></i></a></button>
-                           
-                    </div>
-                    </div>
-                     <div class="pro">
-                <!-- <form> -->
-                <img src="../../public/assets/img/products/f2.jpg" alt="">
-                    <div class="des">
-                    <h2>shirt</h2>
-                        <h5>yellow cool shirt</h5>
-                        <div class="star ">
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                        </div>
-                        <h4>7$</h4>
-                        <input type="number" name="quantity">
-                        <button type="submit"><a class="cart "><i class="fas fa-shopping-cart "></i></a></button>
-                          
-                    </div>
-                    </div>
-                     <div class="pro">
-                <!-- <form> -->
-                <img src="../../public/assets/img/products/f3.jpg" alt="">
-                    <div class="des">
-                    <h2>shirt</h2>
-                        <h5>yellow cool shirt</h5>
-                        <div class="star ">
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                        </div>
-                        <h4>7$</h4>
-                        <input type="number" name="quantity">
-                        <button type="submit"><a class="cart "><i class="fas fa-shopping-cart "></i></a></button>
-                            
-                    </div>
-                    </div>
-                    
+                <?php if(!empty($products)): ?>
+                    <?php foreach($products as $product): ?>
                         <div class="pro">
-                    <!-- <form> -->
-                    <img src="../../public/assets/img/products/f5.jpg" alt="">
-                        <div class="des">
-                        <h2>shirt</h2>
-                            <h5>yellow cool shirt</h5>
-                            <div class="star ">
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                            </div>
-                            <h4>7$</h4>
-                            <input type="number" name="quantity">
-                            <button type="submit"><a class="cart "><i class="fas fa-shopping-cart "></i></a></button>
-                            
+                            <a href="<?=ROOT?>/productDetails/<?=$product->id?>"><img src="../../public/assets/<?=$product->image?>" alt=""></a>
+                                <div class="des">
+                                <h5><?=$product->type?></h5>
+                                    <h3><?=$product->name?></h3>
+                                    <div class="star ">
+                                        <i class="fas fa-star "></i>
+                                        <i class="fas fa-star "></i>
+                                        <i class="fas fa-star "></i>
+                                        <i class="fas fa-star "></i>
+                                        <i class="fas fa-star "></i>
+                                    </div>
+                                    <h4>$<?=$product->price?></h4>
+                                    <?php if($product->stock_qty < 1) : ?>
+                                    <button class="cart" disabled><i class="fas fa-shopping-cart" style="color: gray; font-size: 18px;"></i></button>
+                                    <?php else: ?>
+                                        <a href="<?=ROOT?>/cart/add/<?=$product->id?>" class="cart"><i class="fas fa-shopping-cart"></i></a>
+                                    <?php endif; ?>
+                                    
+                                </div>
                         </div>
-                        </div>
-
-            
-        
-        
-                        
-
-            </div>
+                    <?php endforeach; ?>
+                <?php endif ; ?>
             
         </div>
+            
     </section>
     
 
 
-    <section id="pagenation" class="section-p1">
-    <nav aria-label="Page navigation example" >
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="shop.php" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1 of 2 </a></li>
- 
-    <li class="page-item">
-      <a class="page-link" href="shop.php?" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-
-    </section>
+    
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext ">
