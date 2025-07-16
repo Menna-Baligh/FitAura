@@ -74,4 +74,4 @@
 
 ## 🤝 Author
 
-> Made with 💛 by Menna & [Martina](https://github.com/Martina-511) for learning and demo purposes.
+> Made with 💛 by Menna for learning and demo purposes.
