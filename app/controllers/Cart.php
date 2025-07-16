@@ -1,5 +1,4 @@
 <?php
-$_SESSION['user_id'] = 1; // Example user ID, replace with actual auth management
 class Cart {
     use Controller ;
     public function index(){

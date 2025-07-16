@@ -1,7 +1,5 @@
 <?php
-// testing while martina finish authentication
-$_SESSION['user_id'] = 1; // Example user ID, replace with actual logic to get user ID
-// unset($_SESSION['user_id']);
+
 class Profile {
     use Controller ;
     public function index(){
