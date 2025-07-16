@@ -29,20 +29,47 @@
             </thead>
             <tbody>
                 <?php foreach($orders as $order): ?>
-                    <?php foreach($order->details as $item): ?>
-                        <tr>
-                            <td>
-                                <img src="<?= ROOT ?>/assets/<?= $item->product_image ?>" alt="product">
-                            </td>
-                            <td><?= $item->product_name ?></td>
-                            <td><?= $item->quantity ?></td>
-                            <td>$<?= $item->price ?></td>
-                            <td>$<?=$item->price * $item->quantity?></td>
-                            <td><span class="status <?= strtolower($order->status) ?>"><?= $order->status ?></span></td>
-                            <td><?= date('d M Y, h:i A', strtotime($order->created_at)) ?></td>
-                        </tr>
-                    <?php endforeach; ?>
+                    <tr>
+                        <td>
+                            <?php foreach($order->details as $item): ?>
+                                <div style="margin-bottom: 10px;">
+                                    <img src="<?= ROOT ?>/assets/<?= $item->product_image ?>" alt="product" style="width: 50px; height: 50px;">
+                                </div>
+                            <?php endforeach; ?>
+                        </td>
+
+                        <td>
+                            <?php foreach($order->details as $item): ?>
+                                <div style="margin-bottom: 10px;"><?= $item->product_name ?></div>
+                            <?php endforeach; ?>
+                        </td>
+
+                        <td>
+                            <?php foreach($order->details as $item): ?>
+                                <div style="margin-bottom: 10px;"><?= $item->quantity ?></div>
+                            <?php endforeach; ?>
+                        </td>
+
+                        <td>
+                            <?php foreach($order->details as $item): ?>
+                                <div style="margin-bottom: 10px;">$<?= $item->price ?></div>
+                            <?php endforeach; ?>
+                        </td>
+
+                        <td>
+                            <div style="margin-bottom: 10px;">$<?= $order->total ?></div>
+                        </td>
+
+                        <td>
+                            <span class="status <?= strtolower($order->status) ?>">
+                                <?= $order->status ?>
+                            </span>
+                        </td>
+
+                        <td><?= date('d M Y, h:i A', strtotime($order->created_at)) ?></td>
+                    </tr>
                 <?php endforeach; ?>
+
             </tbody>
         </table>
     </section>
