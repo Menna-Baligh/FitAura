@@ -3,27 +3,33 @@
 
 <link rel="stylesheet" href="../../public/assets/css/product-details.css">
 
-<section class="product-details">
+<?php
+    if(!empty($product)) {?>
+        <section class="product-details">
+            <div class="product-image">
+                <img src="../../public/assets/<?=$product->image?>" alt="Product Image">
+            </div>
 
-    <div class="product-image">
-        <img src="../../public/assets/img/products/f1.jpg" alt="Product Image">
-    </div>
+            <div class="product-info">
+                <h2><?=$product->name?></h2>
+                <div class="rating">
+                    <span>★ ★ ★ ★ ☆</span>
+                </div>
+                <p class="price">$<?=$product->price?></p>
+                <p class="description">
+                    <?=$product->description?>
+                </p>
+                <?php if($product->stock_qty < 1) : ?>
+                    <button class="btn-add" style="background-color: gray;" disabled>Out of Stock</button>
+                <?php else:  ?>
+                <form action="<?=ROOT?>/cart/add/<?=$product->id?>" method="post">
+                    <button type="submit" class="btn-add">Add to Cart</button>
+                </form>
+                <?php endif; ?>
+            </div>
 
-    <div class="product-info">
-        <h2>Pizza Margherita</h2>
-        <div class="rating">
-            <span>★ ★ ★ ★ ☆</span>
-        </div>
-        <p class="price">$10.00</p>
-        <p class="description">
-            Classic Italian pizza made with tomato sauce, mozzarella, and fresh basil leaves. A favorite for all pizza lovers.
-        </p>
-
-        <form action="<?=ROOT?>/cart/add/1" method="post">
-            <button type="submit" class="btn-add">Add to Cart</button>
-        </form>
-    </div>
-
-</section>
+        </section>
+    <?php  }
+?>
 
 <?php include "footer.views.php"; ?>

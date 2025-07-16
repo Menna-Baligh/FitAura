@@ -1,14 +1,14 @@
 <?php
 trait Model {
     use Database ;
-    protected $limit      = 10 ;
-    protected $offset     = 0 ;
+    public $limit      = 10 ;
+    public $offset     = 0 ;
     protected $order_type = 'desc' ;
     protected $order_col  = 'id' ;
     public $errors        = [];
 
     public function selectAll(){
-        $query = "SELECT * FROM $this->table ORDER BY $this->order_col $this->order_type";
+        $query = "SELECT * FROM $this->table ORDER BY $this->order_col $this->order_type limit $this->limit offset $this->offset";
         return $this->Query($query);
     }
     public function where($data , $dataNot = []){
@@ -44,7 +44,7 @@ trait Model {
         $data = array_merge($data , $dataNot);
         $result = $this->Query($query , $data);
         if($result) return $result[0];
-        return true ; 
+        return false ; 
     }
     public function insert($data){
 
